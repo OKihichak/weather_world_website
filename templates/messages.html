@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}View Messages{% endblock %}
+{% block content %}
+<div class="content-section">
+    <!-- Section header for viewing messages -->
+    <h2 class="subheading">Received Messages</h2>
+    <!-- Table to display received messages -->
+    <table>
+        <thead>
+            <tr>
+                <!-- Table headers for message details -->
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Received At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through messages and display each one in a table row -->
+            {% for message in messages %}
+            <tr>
+                <td>{{ message.first_name }}</td>
+                <td>{{ message.last_name }}</td>
+                <td>{{ message.email }}</td>
+                <td>{{ message.phone_number }}</td>
+                <td>{{ message.subject }}</td>
+                <td>{{ message.message }}</td>
+                <td>{{ message.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

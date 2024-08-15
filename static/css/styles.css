@@ -1,0 +1,1424 @@
+/* Fonts and Global Styles */
+/* Importing SF Pro Display fonts with various weights */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Medium.eot');
+    src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
+        url('../fonts/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Medium.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Medium.woff') format('woff'),
+        url('../fonts/SFProDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Bold.eot');
+    src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'),
+        url('../fonts/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Bold.woff') format('woff'),
+        url('../fonts/SFProDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Regular.eot');
+    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
+        url('../fonts/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Regular.woff') format('woff'),
+        url('../fonts/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Set default font family and color for body, labels, and buttons */
+body, label, button {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: #2c2c6c;
+}
+
+/* Background settings for the body */
+body {
+    background: url('../images/mountains.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Different backgrounds based on weather conditions */
+body.sunny {
+    background: url('../images/gifs/sunny.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.rainy {
+    background: url('../images/gifs/rainy.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.cloudy {
+    background: url('../images/gifs/cloudy.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.snowy {
+    background: url('../images/gifs/snowy.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.drizzle {
+    background: url('../images/gifs/drizzle.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.thunderstorm {
+    background: url('../images/gifs/thunderstorm.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.misty {
+    background: url('../images/gifs/misty.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Primary background color class */
+.bg-primary {
+    background-color: #363B64 !important;
+}
+
+/* Footer styles */
+footer {
+    position: relative;
+    bottom: 0;
+    padding: 20px 90px; /* Use padding instead of margin */
+    color: white;
+    font-family: 'SF Pro Display';
+    font-weight: 500;
+    font-style: normal;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+}
+
+.footer a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Header and Navigation */
+header {
+  padding: 10px 90px;
+  box-sizing: border-box;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+header img {
+    max-height: 50px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+
+}
+
+header nav a:hover {
+    color: white;
+}
+
+header .unit-toggle,
+header #geoButton {
+  margin-left: 10px;
+}
+
+header .searchbar {
+  flex-grow: 1;
+  margin-right: auto; /* Aligns the searchbar to the left */
+}
+header .search-container {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+header nav a.active {
+    font-family: 'SF Pro Display';
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.logo {
+    width: 130px;
+    height: 50px;
+}
+
+.home {
+    padding-left: 10px;
+}
+
+.contact {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+.header-wrapper,
+.footer-wrapper {
+    width: 100%;
+}
+
+/* Search Form */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;  /* Stretch the search bar to full width */
+    max-width: none; /* Remove the max-width constraint */
+    position: relative;
+}
+
+.search-container input[type="text"] {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: calc(100% - 40px); /* Adjust width to account for button size */
+    padding: 5px 10px; /* Add left padding to account for the button */
+    font-size: 16px;
+    box-sizing: border-box; /* Add this to ensure padding does not add to the element's width */
+}
+
+header nav {
+  display: flex;
+  gap: 20px; /* Adjust gap as needed */
+  flex-wrap: nowrap;
+}
+header .nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+.search-container button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 15px; /* Position the button to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px; /* Adjust width and height as needed */
+    height: 25px;
+    background-image: url('../images/magn_glass.png'); /* Add the path to your icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent; /* Ensure no background color is applied */
+}
+
+/* Unit toggle buttons */
+/* Unit toggle buttons */
+.unit-toggle {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 25px;
+    /*overflow: auto;*/
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-left: 10px;
+    width: 100px;
+    height: 35px;
+    font-weight: 700;
+}
+
+input[type="radio"].unit-toggle+ label {
+    text-align: center;
+    min-width: 50px;
+    min-height: 35px;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 0px;
+}
+
+input[type="radio"].unit-toggle:checked + label {
+    text-align: center;
+    min-width: 50px;
+    min-height: 35px;
+    background-color: #2c2c6c;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 0px;
+}
+
+                                                /* Weather Widget */
+                                                /* Weather Widget */
+                                                /* Weather Widget */
+                                                /* Weather Widget */
+                                                /* Weather Widget */
+                                                /* Weather Widget */
+                                                /* Weather Widget */
+                                                /* Weather Widget */
+                                                /* Weather Widget */
+
+
+
+
+.weather-card, .hourly-forecast, .weekly-forecast {
+    background: rgba(255, 255, 255, 0.5); /* 50% transparent white */
+    border-radius: 25px;
+    padding: 30px;
+    color: #282828;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.hourly-forecast .row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.weather-icon {
+    width: 280px;
+    height: auto;
+}
+
+.weather-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-description {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    flex-direction: row;
+    color: #363B64;
+}
+
+.sun-times {
+    margin-top: 50px;
+}
+
+.sun-time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sun-time img {
+    margin-right: 10px;
+}
+
+.sun-icon, .detail-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.weather-detail {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.weather-detail img {
+    margin-left: 10px;
+}
+
+.weather-detail div {
+    text-align: right;
+}
+
+.weather-detail p,
+.sun-time p {
+    margin: 0;
+}
+
+.weather-details-container {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.city-name {
+    font-size: 2rem;
+}
+
+.main-temp {
+    font-size: 3rem;
+    color: #363B64;
+}
+
+.feels-like {
+    font-size: 1.2rem;
+    color: #363B64;
+}
+
+.sun-time-title,
+.weather-detail-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #363B64;
+}
+
+.sun-time-value,
+.weather-detail-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #363B64;
+}
+/* Styles for hourly forecast */
+.hourly-forecast h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #363B64;
+}
+
+.forecast-item {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 15px;
+    margin: 0 10px;
+    text-align: center;
+    color: #282828;
+    font-family: 'Poppins', sans-serif;
+}
+
+.forecast-time,
+.forecast-temp,
+.forecast-wind {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.forecast-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+
+
+/* Styles for weekly forecast */
+.weekly-forecast h3 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #363B64;
+}
+
+.weekly-forecast-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px; /* Rounded corners */
+    margin: auto;
+}
+
+.forecast-item.night {
+    background: rgba(44, 62, 80, 0.7); /* Darker background for night */
+    color: #ecf0f1; /* Light text for contrast */
+}
+
+.forecast-item.morning {
+    background: rgba(255, 223, 186, 0.7); /* Light background for morning */
+    color: #2c3e50; /* Dark text for contrast */
+}
+
+.forecast-item.day {
+    background: rgba(251, 158, 0, 0.7); /* Light blue background for day */
+    color: #2c3e50; /* Dark text for contrast */
+}
+
+
+
+.weekly-forecast-item {
+    display: grid;
+    grid-template-columns: 1fr 50px 2fr 1fr;
+    align-items: center;
+    padding: 4% 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.weekly-forecast-item:last-child {
+    border-bottom: none;
+}
+
+.weekly-forecast-day {
+    font-weight: bold;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.weekly-forecast-icon {
+    flex: 0 0 30px; /* Fixed size for icons */
+    justify-content: center;
+    display: flex; /* Ensure the icon container uses flexbox */
+
+}
+
+.weekly-forecast-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.weekly-forecast-description {
+    flex: 1; /* Flex-grow to take remaining space */
+    margin-left: 20px;
+    text-align: left;
+    font-size: 1rem;
+    color: #363B64;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.weekly-forecast-temp {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.temp-container {
+    display: flex;
+    align-items: center;
+}
+.weekly-max-temp, .weekly-min-temp, .slash {
+    margin: 0 2px; /* Reduce spacing between temperature elements */
+}
+.temp-container .weekly-max-temp,
+.temp-container .weekly-min-temp,
+.temp-container .slash {
+    margin: 0 2px;
+}
+
+.weekly-forecast-temp .weekly-max-temp {
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-style: normal;
+    color: #363B64;
+}
+
+.weekly-forecast-temp .weekly-min-temp {
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: normal;
+    color: #363B64;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.main-widget,
+.hourly-forecast,
+.weekly-forecast {
+    background: rgba(255, 255, 255, 0.5); /* 50% transparent white */
+    border-radius: 25px;
+    padding: 30px;
+    color: #282828;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+/* Responsive styles for different screen sizes */
+@media (max-width: 576px) {
+    .main-widget, .hourly-forecast, .weekly-forecast {
+        padding: 20px;
+        max-width: 100%;
+    }
+    .weather-icon {
+        width: 200px;
+        height: 180px;
+    }
+    .weather-description {
+        font-size: 1.2rem;
+    }
+    .city-name {
+        font-size: 1.5rem;
+    }
+    .main-temp {
+        font-size: 2rem;
+    }
+    .feels-like {
+        font-size: 1rem;
+    }
+    .sun-time-title,
+    .weather-detail-title,
+    .hourly-forecast h3,
+    .weekly-forecast h3 {
+        font-size: 1.5rem;
+    }
+    .sun-time-value,
+    .weather-detail-value,
+    .forecast-time,
+    .forecast-temp,
+    .forecast-wind,
+    .weekly-forecast-day,
+    .weekly-forecast-temp .weekly-max-temp,
+    .weekly-forecast-temp .weekly-min-temp {
+        font-size: 1rem;
+    }
+
+    .weekly-forecast-description {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .main-widget, .hourly-forecast, .weekly-forecast {
+        padding: 25px;
+        max-width: 100%;
+    }
+    .weather-icon {
+        width: 250px;
+        height: 230px;
+    }
+    .weather-description {
+        font-size: 1.3rem;
+    }
+    .city-name {
+        font-size: 1.8rem;
+    }
+    .main-temp {
+        font-size: 2.5rem;
+    }
+    .feels-like {
+        font-size: 1.1rem;
+    }
+    .sun-time-title,
+    .weather-detail-title,
+    .hourly-forecast h3,
+    .weekly-forecast h3 {
+        font-size: 1.6rem;
+    }
+    .sun-time-value,
+    .weather-detail-value,
+    .forecast-time,
+    .forecast-temp,
+    .forecast-wind,
+    .weekly-forecast-day,
+    .weekly-forecast-temp .weekly-max-temp,
+    .weekly-forecast-temp .weekly-min-temp {
+        font-size: 1.1rem;
+    }
+
+    .weekly-forecast-description {
+        margin-left: 0;
+    }
+
+    .col-sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 90px;
+        padding-right: 90px;
+
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .main-widget, .hourly-forecast, .weekly-forecast {
+        padding: 30px;
+        max-width: 100%;
+    }
+    .weather-icon {
+        width: 275px;
+        height: 250px;
+
+    }
+
+      .col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+    .weather-description {
+        font-size: 1.4rem;
+
+    }
+    .city-name {
+        font-size: 1.9rem;
+    }
+    .main-temp {
+        font-size: 2.8rem;
+    }
+    .feels-like {
+        font-size: 1.15rem;
+    }
+    .weather-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+
+    }
+    .weather-details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .weather-detail {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .weather-detail img {
+        width: 40px;
+        height: 40px;
+    }
+    .sun-time {
+        display: none;
+    }
+    .sun-time-title,
+    .weather-detail-title,
+    .hourly-forecast h3,
+    .weekly-forecast h3 {
+        font-size: 1.7rem;
+    }
+    .sun-time-value,
+    .weather-detail-value,
+    .forecast-time,
+    .forecast-temp,
+    .forecast-wind,
+    .weekly-forecast-day,
+    .weekly-forecast-temp .weekly-max-temp,
+    .weekly-forecast-temp .weekly-min-temp {
+        font-size: 1.15rem;
+    }
+    .weekly-forecast-description {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+    .main-widget, .hourly-forecast, .weekly-forecast {
+        padding: 30px;
+        max-width: 900px;
+    }
+    .weather-icon {
+        width: 300px;
+        height: 280px;
+    }
+    .weather-description {
+        font-size: 1.5rem;
+    }
+    .city-name {
+        font-size: 2rem;
+    }
+    .main-temp {
+        font-size: 3rem;
+    }
+    .feels-like {
+        font-size: 1.2rem;
+    }
+    .sun-time-title,
+    .weather-detail-title,
+    .hourly-forecast h3,
+    .weekly-forecast h3 {
+        font-size: 1.8rem;
+    }
+    .sun-time-value,
+    .weather-detail-value,
+    .forecast-time,
+    .forecast-temp,
+    .forecast-wind,
+    .weekly-forecast-day,
+    .weekly-forecast-temp .weekly-max-temp,
+    .weekly-forecast-temp .weekly-min-temp {
+        font-size: 1.2rem;
+    }
+
+
+    .weekly-forecast-description {
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .searchbar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+
+                                                   /* Content Sections */
+                                                   /* Content Sections */
+                                                   /* Content Sections */
+                                                   /* Content Sections */
+                                                   /* Content Sections */
+                                                   /* Content Sections */
+                                                   /* Content Sections */
+
+
+
+
+.content {
+    width: 100%;
+}
+.content-section {
+    border-radius: 15px;
+    margin: 20px auto; /* Center the container horizontally */
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 50px 20px;
+    display: block;
+    overflow: auto;
+    max-width: 90%; /* Extend the container's maximum width */
+    width: 2160px; /* Ensure it takes the full width available */
+}
+
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Styling for "Why Choose Us" and "Meet the Team" sections */
+.why-choose-us,
+.team-section {
+    text-align: center;
+    flex: 1;
+    padding: 20px 70px;
+    min-width: 500px;
+}
+
+/* Big logo in the "Why Choose Us" section */
+.big-logo {
+    display: block;
+    margin: 70px auto 0 auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 13px;
+    gap: 20px;
+    text-align: center;
+}
+
+/* Feature cards styling */
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+    min-height: 180px;
+    gap: 10px;
+    padding: 40px 10px;
+    border: 1px solid #363B64;
+    border-radius: 10px;
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+/* Hover effect for feature cards */
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature img {
+    height: 50px;
+    width: 50px;
+}
+
+.team-section h2,
+.why-choose-us h2 {
+    color: #363B64;
+    text-align: center;
+}
+
+.team-section p,
+.why-choose-us p {
+    text-align: justify;
+}
+
+/* Styling for team members section */
+.team-members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    gap: 20px;
+    justify-content: center; /* Center the team members */
+}
+
+/* Team member cards styling */
+.team-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 230px; /* Flex-grow, flex-shrink, flex-basis */
+    background: #363B64;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    max-width: 325px; /* Ensure a max width to prevent excessive growth */
+    min-height: 100px;
+}
+
+/* Hover effect for team member cards */
+.team-member:hover {
+    background: #5c66ae;
+}
+
+/* Responsive styles for smaller screens */
+
+
+/* Forms */
+.subheading {
+    text-align: center;
+    color: #363B64;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all .3s;
+    border-bottom: 2px solid #2c2c6c;
+}
+
+input:focus {
+    border-bottom: 2px solid rgb(105, 105, 234);
+}
+
+/* Contact Us section specific styling */
+#contact-us.columns {
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contact-info {
+    background: #363B64;
+    color: #FFF;
+    padding: 60px;
+    border-radius: 35px; /* Adjusted for consistency */
+    max-width: 40%; /* Increase width to make it larger */
+    flex: 1; /* Allow it to grow */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Decorative circles in the contact info section */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle.small {
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    bottom: 90px; /* Adjust position as needed */
+    left: 420px; /* Adjust position as needed */
+    background-color: #272A43;
+}
+
+/* Larger circle */
+.circle.large {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    bottom: -30px; /* Adjust position as needed */
+    left: 450px; /* Adjust position as needed */
+    background-color: #2E3255;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 50px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+/* Contact form styling */
+.contact-form {
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-form .form-label {
+    font-weight: bold;
+    color: #2c2c6c;
+}
+
+.form-label {
+    padding: 10px;
+}
+
+/* Styling for the form group */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add some space below the form group */
+}
+
+/* Styling for inline radio buttons */
+.form-check-inline {
+    margin-right: 20px; /* Add space between radio buttons */
+    display: flex;
+    align-items: center;
+}
+
+/* Hide the default radio button */
+.contact-form .form-check-input {
+    display: none;
+}
+
+/* Styling for labels */
+.contact-form .form-check-label {
+    position: relative;
+    padding-left: 30px; /* Space for custom radio button */
+    cursor: pointer;
+    font-weight: 600; /* Make text semi-bold */
+    color: #2c2c6c; /* Dark text color */
+}
+
+/* Custom radio button */
+.contact-form .form-check-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2c2c6c; /* Border color */
+    border-radius: 50%; /* Make it round */
+    background-color: transparent;
+}
+
+/* Background color when checked */
+.contact-form .form-check-input:checked + .form-check-label::before {
+    background-color: #2c2c6c;
+}
+
+/* Inner circle when checked */
+.contact-form .form-check-input:checked + .form-check-label::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: white; /* Inner circle color */
+    border-radius: 50%;
+}
+
+/* Other input styles */
+.contact-form .form-control {
+    border: 2px solid #363B64;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: transparent;
+}
+
+/* Primary button styles */
+.btn-primary {
+    background-color: #363B64;
+    border-color: #363B64;
+    color: #FFF;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* Primary button hover state */
+.btn-primary:hover {
+    background-color: #1A1A4A;
+    border-color: #1A1A4A;
+}
+
+/* Radio Buttons Styling */
+input[type="radio"] {
+    display: none;
+    min-height: 10px;
+    text-align: center;
+}
+
+input[type="radio"]+ label {
+    text-align: center;
+    min-width: 100px;
+    min-height: 50px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Secondary button styles */
+.btn-secondary {
+    color: #fff;
+    background-color: #2c2c6c;
+    border-color: #2c2c6c;
+    border-radius: 1.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: #1A1A4A;
+    border-color: #1A1A4A;
+}
+
+
+.left-column {
+    padding-left: 5.5rem;
+}
+
+.right-column {
+    padding-right: 6rem ;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+
+.d-flex {
+  display: flex !important;
+}
+
+/* Responsive styles for smaller screens */
+/* Example styles for extra small devices */
+
+@media (max-width: 600px) {
+    .main-widget, .hourly-forecast, .weekly-forecast {
+        padding: 20px;
+        max-width: 100%;
+    }
+    .weather-icon {
+        width: 200px;
+        height: 180px;
+    }
+    .weather-description {
+        font-size: 1.2rem;
+    }
+    .city-name {
+        font-size: 1.5rem;
+    }
+    .circle.large{
+        width: 0;
+    }
+    .circle.small{
+        width: 0;
+    }
+    .main-temp {
+        font-size: 2rem;
+    }
+    .feels-like {
+        font-size: 1rem;
+    }
+    .sun-time-title,
+    .weather-detail-title,
+    .hourly-forecast h3,
+    .weekly-forecast h3 {
+        font-size: 1.5rem;
+    }
+    .sun-time-value,
+    .weather-detail-value,
+    .forecast-time,
+    .forecast-temp,
+    .forecast-wind,
+    .weekly-forecast-day,
+    .weekly-forecast-temp .weekly-max-temp,
+    .weekly-forecast-temp .weekly-min-temp {
+        font-size: 1rem;
+    }
+    .weekly-forecast-description {
+        margin-left: 0;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .searchbar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Example styles for small devices */
+@media (min-width: 600px) and (max-width: 768px) {
+    .main-widget, .hourly-forecast, .weekly-forecast {
+        padding: 25px;
+        max-width: 100%;
+    }
+    .weather-icon {
+        width: 250px;
+        height: 230px;
+    }
+    .circle.large{
+        width: 0;
+       }
+    .circle.small{
+        width: 0;
+       }
+    .weather-description {
+        font-size: 1.3rem;
+    }
+    .city-name {
+        font-size: 1.8rem;
+    }
+    .main-temp {
+        font-size: 2.5rem;
+    }
+    .feels-like {
+        font-size: 1.1rem;
+    }
+    .sun-time-title,
+    .weather-detail-title,
+    .hourly-forecast h3,
+    .weekly-forecast h3 {
+        font-size: 1.6rem;
+    }
+    .sun-time-value,
+    .weather-detail-value,
+    .forecast-time,
+    .forecast-temp,
+    .forecast-wind,
+    .weekly-forecast-day,
+    .weekly-forecast-temp .weekly-max-temp,
+    .weekly-forecast-temp .weekly-min-temp {
+        font-size: 1.1rem;
+    }
+    .weekly-forecast-description {
+        margin-left: 0;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .searchbar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Example styles for medium devices */
+@media (min-width: 768px) and (max-width: 992px) {
+    .main-widget, .hourly-forecast, .weekly-forecast {
+        padding: 30px;
+        max-width: 100%;
+    }
+    .weather-icon {
+        width: 275px;
+        height: 250px;
+    }
+    .weather-description {
+        font-size: 1.4rem;
+    }
+    .city-name {
+        font-size: 1.9rem;
+    }
+    .main-temp {
+        font-size: 2.8rem;
+    }
+    .feels-like {
+        font-size: 1.15rem;
+    }
+    .circle.large{
+        width: 0;
+       }
+    .circle.small{
+        width: 0;
+       }
+    .sun-time-title,
+    .weather-detail-title,
+    .hourly-forecast h3,
+    .weekly-forecast h3 {
+        font-size: 1.7rem;
+    }
+    .sun-time-value,
+    .weather-detail-value,
+    .forecast-time,
+    .forecast-temp,
+    .forecast-wind,
+    .weekly-forecast-day,
+    .weekly-forecast-temp .weekly-max-temp,
+    .weekly-forecast-temp .weekly-min-temp {
+        font-size: 1.15rem;
+    }
+    .weekly-forecast-description {
+        margin-left: 0;
+    }
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+    .searchbar {
+        width: auto;
+        margin-bottom: 0;
+    }
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Example styles for large devices */
+@media (min-width: 992px) and (max-width: 1400px) {
+    .main-widget, .hourly-forecast, .weekly-forecast {
+        padding: 30px;
+        max-width: 900px;
+    }
+    .weather-icon {
+        width: 300px;
+        height: 280px;
+    }
+    .weather-description {
+        font-size: 1.5rem;
+    }
+    .city-name {
+        font-size: 2rem;
+    }
+    .circle.large{
+        width: 0;
+       }
+    .circle.small{
+        width: 0;
+       }
+    .main-temp {
+        font-size: 3rem;
+    }
+    .feels-like {
+        font-size: 1.2rem;
+    }
+    .sun-time-title,
+    .weather-detail-title,
+    .hourly-forecast h3,
+    .weekly-forecast h3 {
+        font-size: 1.8rem;
+    }
+    .sun-time-value,
+    .weather-detail-value,
+    .forecast-time,
+    .forecast-temp,
+    .forecast-wind,
+    .weekly-forecast-day,
+    .weekly-forecast-temp .weekly-max-temp,
+    .weekly-forecast-temp .weekly-min-temp {
+        font-size: 1.2rem;
+    }
+    .weekly-forecast-description {
+        margin-left: 0;
+    }
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+    .searchbar {
+        width: auto;
+        margin-bottom: 0;
+    }
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Example styles for extra large devices */
+
+@media (min-width: 1401px) {
+    .circle.large {
+        left: 70%;
+    }
+    .circle.small {
+        left: 60%;
+    }
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+    .searchbar {
+        width: auto;
+        margin-bottom: 0;
+    }
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+    }
+}
