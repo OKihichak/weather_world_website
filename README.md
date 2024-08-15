@@ -23,8 +23,7 @@ mission of Weather World.
 
 1\. \*\*Clone this repository\*\*:
 
-\`\`\`bash git clone https://github.com/yourusername/weather-world.git
-cd weather-world \`\`\`
+\`\`\`bash git clone https://github.com/OKihichak/weather_world_website.git \`\`\`
 
 2\. \*\*Create a virtual environment and activate it\*\*:
 
