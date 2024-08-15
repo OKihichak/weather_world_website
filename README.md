@@ -113,4 +113,4 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 
 ## 📧 Contact Information
 - **✉️ Email**: oleg15062005@gmail.com
-- **💻 GitHub**: [OKihichak](https://github.com/OKihichak)
+- **💻 GitHub**: [Oleh Kihichak](https://github.com/OKihichak)
